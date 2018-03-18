@@ -21,6 +21,12 @@ class DetailViewController: UIViewController {
         self.xSubtitle.text = "\(self.detail!.description)"
         self.xImage.image = detail!.toImage()
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.xSubtitle.setContentOffset(CGPoint(), animated: false)
+    
+       
+    }
 
 
 }

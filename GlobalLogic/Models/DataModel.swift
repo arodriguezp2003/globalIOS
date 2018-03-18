@@ -16,10 +16,7 @@ struct  DataModel: Mappable  {
     var description: String = ""
     var image: String = ""
     
-    
-    init( map: Map) {
-        
-    }
+    init( map: Map) {}
     
     mutating func mapping(map: Map) {
         self.title     <- map["title"]

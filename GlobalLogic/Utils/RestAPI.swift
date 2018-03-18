@@ -23,7 +23,7 @@ class RestAPI {
                 }
                 completion(response.result.value!)
             } else {
-                
+                 completion([DataModel]())
             }
         })
     }
