@@ -24,5 +24,12 @@ class CellTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
-
+    
+    public func setup(_ item: DataModel) {
+        self.xTitle.text = "\(item.title)"
+        self.xSubtitle.text = "\(item.description)"
+        self.xImage.image = item.toImage()
+        self.xImage.layer.cornerRadius = 30.0
+        self.xImage.layer.masksToBounds = true
+    }
 }
